@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<style type="text/css">
+
+		#hose {
+			width:250px;
+			height:250px;
+			background-image:url(Hose.png);
+			background-size:cover;
+			background-repeat: no-repeat;
+			position: absolute;
+			z-index: -10;
+		}
+
+		body{
+			background-image:url(https://t4.ftcdn.net/jpg/00/92/05/97/360_F_92059706_JKCwjvKFKowSm2u279o1NNP1kNxrlALu.jpg);
+			background-size:cover;
+			background-repeat: no-repeat;
+			margin:0px;
+		}
+
+h1{
+	color:white;
+}
+
+	</style>
+
+</head>
+<body>
+	<h1>	Click The Plants And Seeds To Water Your Garden
+</h1>
+
+	<div id ="hose"></div>
+
+
+
+	<script type ="text/javascript">
+
+
+		// document.addEventListener("mousemove", function)
+
+		function makeOrange (){
+			var field = document.createElement("div");
+			document.body.appendChild(field);
+			
+			field.style.width = "200px";
+			field.style.height = "250px";
+			field.style.display = "inline-block";
+			field.style.backgroundImage = "url(https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/blade-of-grass-lonnie-paulson.jpg)";
+			field.style.backgroundSize = "contain";
+			field.style.backgroundRepeat = "no-repeat";
+			field.addEventListener("click", function(){
+				field.style.backgroundImage = "url(https://mowerplace.com.au/wp-content/uploads/2023/01/The-Stages-of-Grass-Growth-Understanding-the-Cycle-of-Your-Lawns-Life-1024x576.jpg)"
+				})
+			
+			 		
+
+			}
+
+				for (var i=0; i<7; i=i+1) {
+			makeOrange();
+		}
+
+		function makeFlower (){
+			var seed = document.createElement("div");
+			document.body.appendChild(seed);
+			
+			seed.style.width = "200px";
+			seed.style.height = "250px";
+			seed.style.display = "inline-block";
+			seed.style.backgroundImage = "url(https://static1.squarespace.com/static/54fbb611e4b0d7c1e151d22a/553d6c79e4b0bd2add1ae0a0/602ad3ceb441e6035c613e49/1679341537335/seedling.jpg?format=1500w)";
+			seed.style.backgroundSize = "contain";
+			seed.style.backgroundRepeat = "no-repeat";
+
+			seed.addEventListener("click", function(){
+				seed.style.backgroundImage = "url(https://miraclegro.com/dw/image/v2/BGFS_PRD/on/demandware.static/-/Sites-consolidated-master-catalog/default/dw3860f726/images/hi-res/061615_CA_A_709.jpg?sw=800&sh=800)"
+				})
+			 		
+		 	}
+
+
+			for (var i=0; i<7; i=i+1) {
+			makeFlower();
+		}
+
+		function makeTree (){
+			var tree = document.createElement("div");
+			document.body.appendChild(tree);
+			
+			tree.style.width = "200px";
+			tree.style.height = "250px";
+			tree.style.display = "inline-block";
+			tree.style.backgroundImage = "url(https://nativetreesfromseed.com/wp-content/uploads/2023/08/sowing-acorns.jpg)";
+			tree.style.backgroundSize = "contain";
+			tree.style.backgroundRepeat = "no-repeat";
+			tree.addEventListener("click", function(){
+				tree.style.backgroundImage = "url(https://www.halkanursery.com/wp-content/uploads/2019/04/unnamed-129.jpg)"
+				})
+			
+			}
+
+
+			for (var i=0; i<7; i=i+1) {
+			makeTree();
+		}
+
+
+
+
+
+
+		 // }
+
+		// setInterval(makeOrange, 100)
+
+	
+		// makeOrange()
+		// makeOrange()
+		// makeOrange()
+		// makeOrange()
+		// makeOrange()
+		// makeOrange()
+		// makeOrange()
+
+
+		// makeFlower()
+		// makeFlower()
+		// makeFlower()
+		// makeFlower()
+		// makeFlower()
+		// makeFlower()
+		// makeFlower()
+
+		// makeTree()
+		// makeTree()
+		// makeTree()
+		// makeTree()
+		// makeTree()
+		// makeTree()
+		// makeTree()
+
+
+
+		document.addEventListener("mousemove", function(event){
+			console.log(event.clientX, event.clientY)
+			hose.style.left = event.clientX +"px";
+			hose.style.top = event.clientY +"px";
+
+		})
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>
