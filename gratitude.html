@@ -1,39 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+	Click
 	<style type="text/css">
 		
-		
+		body{
+			margin:0px;
+		}
+
+		#card{
+			background-size:cover;
+			background-repeat:no-repeat;
+			width: 100%;
+			height:1000px;
+			background-image:url(https://static.foxnews.com/foxnews.com/content/uploads/2020/12/The-Dalton-School.jpg);
+			font-size:50px;
+			color:white;
+
+		}
+
+		#school {
+			background-size:cover;
+			width:100%;
+			height:1000px;
+			background-image:url(https://static.foxnews.com/foxnews.com/content/uploads/2020/12/The-Dalton-School.jpg);
+
+		}
 
 	</style>
 </head>
 <body>
 
+	<div id="card"></div>
+
+	<div id ="school"></div>
+
 	<script type ="text/javascript">
+
+
 
 
 		// document.addEventListener("mousemove", function)
 
-		function makeLetter (){
-			var card = document.createElement("div");
-			document.body.appendChild(card);
+			var card = document.getElementById("card");
 			
-			card.style.width = "2000px";
-			card.style.height = "2000px";
-			// card.style.display = "inline-block";
-			card.style.backgroundColor = "red";
+			card.addEventListener("click", function(){
+
+			card.innerText = "Hello, the people in Dalton who I would like to thank are everyone who works there, namely the staff in the kitchen, the security guards and maintenance. Thank you for all that you do to help ensure that the building runs well. You are the real reason that Dalton is functioning as it is. You work in truly appreciated as well is the dedication to keeping Dalton in healthy and safe shape. You are the uncelebrated heroes, and I thank you - Jonathan"
+
 				card.addEventListener("click", function(){
-				card.style.backgroundImage = "url(https://images.wsj.net/im-278567?width=1280&size=1.77777778)"
-			 	card.style.backgroundRepeat = "no-repeat"
-				
-			 })
-			card.innerText = ";lkj;lkj;lkj;lkj "
+					school.style.backgroundImage = "url(https://www.chalkbeat.org/resizer/NSNxMe9j_44lek01VJJw-TEhHdU=/1600x900/filters:format(png):quality(85)/cloudfront-us-east-1.images.arcpublishing.com/civicnewscompany/IQOOLJ47ZRBB3CRGB4356DEVZU.png)"
+				})
+
 			
-			 		
 
-			}
+			 }) //end of function
 
-		makeLetter()
+			
+			
+			 	
 
 	</script>
 
