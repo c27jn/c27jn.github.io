@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	Create your food, choose however many servings you want and place in the bowl
+
+<style type = "text/css">
+	#cup{
+		width:800px;
+		height:800px;
+		background-image:url(https://www.ikea.com/us/en/images/products/blanda-matt-serving-bowl-bamboo__0711988_pe728640_s5.jpg);
+		background-size: contain;
+
+	}
+
+	#chicken{
+		background-image:url(chicken.png);
+	}
+
+	#pork{
+		background-image:url(pork.png);
+	}
+
+	#cheese{
+		background-image:url(cheese.png);
+	}
+
+	#chowder{
+		background-image:url(chowder.png);
+	}
+
+	#beans {
+		background-image:url(beans.jpg);
+	}
+
+	#broth{
+		background-image:url(broth.png);
+	}
+
+	#carrots{
+		background-image:url(carrots.png);
+	}
+
+	#tomato{
+		background-image:url(tomato.png);
+	}
+
+
+	.bowl {
+		width: 150px;
+		height: 150px;
+		 background-size: contain;
+        background-repeat: no-repeat;
+		display: inline-block;
+
+
+	}
+
+
+
+</style>
+	
+</head>
+<body>
+	<div id ="cup"></div>
+	<div class="bowl" id = "broth"></div>
+	<div class="bowl" id = "chowder"></div>
+	<div class="bowl" id = "bisque"></div>
+	<div class="bowl" id = "chicken"></div>
+	<div class="bowl" id = "pork"></div>
+	<div class="bowl" id = "cheese"></div>
+	<div class="bowl" id = "beans"></div>
+	<div class="bowl" id = "carrots"></div>
+	<div class="bowl" id = "tomato"></div>
+	<div class="bowl" id = ""></div>
+
+
+<script type="text/javascript">
+	var image;
+	broth.addEventListener("click", function(){
+		image = "broth.png"
+		console.log(image)
+
+	});
+
+	chowder.addEventListener("click", function(){
+		image = "chowder.png"
+		console.log(image)
+	});
+
+	chicken.addEventListener("click", function(){
+		image = "chicken.png"
+		console.log(image)
+
+	});
+
+	pork.addEventListener("click", function(){
+		image = "pork.png"
+		console.log(image)
+	});
+
+	cheese.addEventListener("click", function(){
+		image = "cheese.png"
+		console.log(image)
+	});
+
+	beans.addEventListener("click", function(){
+		image = "beans.jpg"
+		console.log(image)
+	});
+
+	carrots.addEventListener("click", function(){
+		image = "carrots.png"
+		console.log(image)
+	});
+
+	tomato.addEventListener("click", function(){
+		image = "tomato.png"
+		console.log(image)
+	});
+
+</script>
+
+</body>
+</html>
