@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<div id = "names">who is going to win the next brawl stars match?</div>
+	<script type = "text/javascript">
+
+		var brawlstars = ["henry", "nathan", "seb", "jonny"]
+		// console.log(brawlstars[3])
+
+		// var random = Math.round(Math.random()*3)
+
+		// console.log(brawlstars[random])
+
+		document.addEventListener("click", function(){
+			var random = Math.round(Math.random()*3)
+			names.innerText = brawlstars [random]
+		})
+		
+	</script>
+</body>
+</html>

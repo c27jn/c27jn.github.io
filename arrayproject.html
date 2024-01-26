@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	Having trouble deciding what to eat, click around to choose your meals. 
+	Click below, then click beneath the food choice if you are struggling to find a beverage
+	
+	<style type="text/css">
+		#firstchoice {
+			width:300px;
+			height:300px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-image:url(bowl.png);
+		}
+
+		#choice1 {
+			width:300px;
+			height:300px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-image:url(empty.jpg);
+		}
+		
+		
+	</style>
+</head>
+<body>
+	<form>
+		<label for="grade1">Do you like this option. We will use your feedback to improve out choices. </label>
+		<input type="text" id="feedback" name="feedback">
+		<input type="submit">
+	</form>
+	<div id="firstchoice"></div>
+	<div id="choice1"></div>
+
+<script type ="text/javascript">
+
+	var breakfast = ["url(cereal.jpg)", "url(ftoast.jpg)", "url(Eggs.jpg)", "url(Pancakes.jpg)", "url(fruit.jpg)"]
+	
+
+
+	firstchoice.addEventListener("click", function(){
+			var choose =  Math.round(Math.random() * 4)
+
+			firstchoice.style.backgroundImage = breakfast[choose]
+	
+	})
+
+	var chose = ["url(juice.jpg)", "url(milk.jpg)", "url(water.jpg"]
+
+	choice1.addEventListener("click", function(){
+		var number = Math.round(Math.random()*2 )
+		choice1.style.backgroundImage = chose[number]
+	
+
+	})
+
+
+
+
+</script>	
+
+
+</body>
+</html>
