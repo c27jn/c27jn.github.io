@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<script src="p5.js"></script>
+
+</head>
+<body>
+
+<script>
+	// let video;
+
+
+// 	function setup() {
+// 		createCanvas(windowWidth, windowHeight);
+// 		video = createCapture(VIDEO);
+// 		video.size(width, height);
+// 		video.hide();
+// // This is the setup function where everyting for the program is defined, here I set the video frame, and dimensions of the program (video), as well as loading the video for the program
+	
+
+// 	 }
+
+// 	 function draw(){
+// 	 	background(255);
+
+
+// 	 	let gridSize = int(map(mouseX, 0,width, 15,50));
+
+// 	 	video.loadPixels();
+// 	 	for(let y=0; y<video.height; y+=gridSize) {
+// 	 		for(let x=0; x<video.height; x+=gridSize) {
+// 			// This load pixels function, applies to the video variable, and what load pixels does is, it loads the current value of the pixels into the frame. So it displays the pixels colors which allows it to differentiate something in the screen.
+
+// 	 			let index = (y *video.width + x) *4;
+// 					// This line is used to get the values (position) of a certain pixel in the screen. We need to know
+// 	 			let r = video.pixels[index];
+// 					// Given the RGB lighting system for determining colors, this line is used to obtain the value of the red from the specific pixel that we are looking at. 
+// 	 			let dia = map(r, 0,255, gridSize, 2);
+// 					// This line uses the red value of the pixel from the above line, and uses it to determine the size of the circle which is displayed in the camera as circle pixels. 
+// 	 			fill(0);
+// 	 			noStroke();
+// 	 			circle(x, y, dia);
+// 	 		}
+// 	 	}
+// 	 }
+	 let video;
+	 let tolerance = 5;
+	 let colorToMatch;
+	 let video
+	 function setup() {
+		createCanvas(windowWidth, windowHeight);
+
+		video = createCapture(VIDEO);
+		video.size(640, 480);
+		video.hide();
+		colorToMatch= color(255,150,0); 
+	} 
+	 function draw(){
+		image(video, 0, 0);
+		let firstPx = findColor(video, colorToMatch, tolerance);
+		if (firstPx !== undefined){
+			fill(); 
+			stroke(255);
+			strokeWeight(2);
+			circle(firstPx.x, firstPx.y, 30);
+		}
+	 }
+
+	 function mousePressed(){
+	 	loadPixels();
+	 	colorToMatch= get(mouseX, mouseY);
+	 }
+	 function findColor(input, c, tolerance) {
+	 	if (input.width === 0 || input.height === 0) {
+	 		return undefined;
+	 	}
+	 	let matchR = c[0];
+	 	let matchG = c[1];
+	 	let matchB = c[2];
+
+	 	input.loadPixels();
+	 	for (let y = 0; y<input.height; y++){
+	 		for (let x=0; x<input.width; x++){
+	 			let index = (y * video.width + x) *4;
+	 			let r = video.pixels[index];
+	 			let g = video.pixels[index+1];
+	 			let b = video.pixels[index+2];
+	 			if (r >= matchR-tolerance && r <= matchR+tolerance && g >= matchG-tolerance && g <= matchG+tolerance && b >= matchB-tolerance && b <= matchB+tolerance) {
+
+	 				return createVector(x, y);
+
+	 			}
+	 		}
+	 	}
+
+
+	 }
+
+
+
+</script>
+
+</body>
+</html>
